@@ -1,15 +1,12 @@
-import sumar from "./sumador";
+import romano from "./romanos.js";
+import romanos from "./romanos.js";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
-const div = document.querySelector("#resultado-div");
+const first = document.querySelector("#numeroN");
+const form = document.querySelector("#romanos-form");
+const div = document.querySelector("#res-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
-
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  div.innerHTML = "<p>" + romano(first.value) + "</p>";
 });
