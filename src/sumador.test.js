@@ -6,6 +6,12 @@ describe("Numero Romano", () => {
   });
 });
 
+describe("Numero Romano", () => {
+  it("retorna el numero 2 en Romano", () => {
+    expect(romano(2)).toEqual("II");
+  });
+});
+
 /*import sumar from "./sumador.js";
 
 describe("Sumar", () => {
