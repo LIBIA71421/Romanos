@@ -1,38 +1,26 @@
 function romano(num) {
-    let numRomano = "";
-    switch(num){
-        case 1:
-            numRomano = 'I'
-            break;
-        case 2:
-            numRomano = 'II'
-            break;
-        case 3:
-            numRomano = 'III'
-            break;
-        case 4:
-            numRomano = 'IV'
-            break;
-        case 5:
-            numRomano = 'V'
-            break;
-        case 6:
-            numRomano = 'VI'
-            break;
-        case 7:
-            numRomano = 'VII'
-            break;
-        case 8:
-            numRomano = 'VIII'
-            break;
-        case 9:
-            numRomano = 'IX'
-            break;
-        case 10:
-            numRomano = 'X'
-            break;
-    }
-    return numRomano;
-  }
+    var roman = {
+      M: 1000,
+      CM: 900,
+      D: 500,
+      CD: 400,
+      C: 100,
+      XC: 90,
+      L: 50,
+      XL: 40,
+      X: 10,
+      IX: 9,
+      V: 5,
+      IV: 4,
+      I: 1
+    };
+    var str = '';
   
+    for (var i of Object.keys(roman)) {
+      var q = Math.floor(num / roman[i]);
+      num -= q * roman[i];
+      str += i.repeat(q);
+    }
+  return str;
+}
   export default romano;

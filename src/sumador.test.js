@@ -18,6 +18,11 @@ describe("Numero Romano", () => {
   });
 });
 
+describe("Numero Romano", () => {
+  it("retorna del 1-100 en Romano", () => {
+    expect(romano(51)).toEqual("LI");
+  });
+});
 /*import sumar from "./sumador.js";
 
 describe("Sumar", () => {
